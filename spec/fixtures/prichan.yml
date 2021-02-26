@@ -1,0 +1,79 @@
+title: "キラッとプリ☆チャン"
+characters:
+  # シーズン1
+  - name:        "桃山みらい"
+    birthday:    "7/12"
+    description: "デコレーションケーキの日"
+
+  - name:        "萌黄えも"
+    birthday:    "9/9"
+    description: "ポップコーンの日"
+
+  - name:        "青葉りんか"
+    birthday:    "1/25"
+    description: "美容記念日、メイクの日"
+
+  - name:        "赤城あんな"
+    birthday:    "7/6"
+    description: "ピアノの日"
+
+  - name:        "緑川さら"
+    birthday:    "6/9"
+    description: "ロックの日"
+
+  - name:        "紫藤める"
+    birthday:    "4/23"
+    description: "英語デー"
+
+  - name:        "白鳥アンジュ"
+    birthday:    "11/11"
+    description: "宝石の日"
+
+  - name:        "七星あいら"
+    birthday:    "9/3"
+
+  - name:        "マリー"
+    birthday:    "7/4"
+
+  - name:        "ミズリー"
+    birthday:    "12/12"
+
+  - name:        "クオ"
+    birthday:    "9/23"
+
+  - name:        "バディス"
+    birthday:    "3/23"
+
+  # シーズン2
+  - name:        "金森まりあ"
+    birthday:    "5/9"
+    description: "アイスクリームの日"
+
+  - name:        "黒川すず"
+    birthday:    "12/6"
+    description: "ダンスの日"
+
+  - name:        "虹ノ咲だいあ"
+    birthday:    "4/22"
+    description: "ダイヤモンド原石の日"
+
+  # シーズン3
+  - name:        "メルパン"
+    birthday:    "8/8"
+
+  - name:        "キラッCHU"
+    birthday:    "10/10"
+    description: "みらいが初めてキラッCHUを描いた日"
+
+  - name:        "アリス・ペペロンチーノ"
+    birthday:    "11/5"
+
+  - name:        "輝イブ"
+    birthday:    "11/5"
+    description: "いいたまごの日"
+
+  - name:        "ソルル"
+    birthday:    "2/22"
+
+  - name:        "ルルナ"
+    birthday:    "2/22"
