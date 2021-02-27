@@ -16,12 +16,12 @@ class BirthdayCalendarClient
   # @return [Array<String>]
   def find_by_birthday(date)
     characters =
-      all_characters.select do |chara|
-        month, day = *chara["birthday"].split("/")
+      all_characters.select do |character|
+        month, day = *character["birthday"].split("/")
         month.to_i == date.month && day.to_i == date.day
       end
 
-    characters.map { |chara| chara["name"] }
+    characters.map { |character| character["name"] }
   end
 
   private
