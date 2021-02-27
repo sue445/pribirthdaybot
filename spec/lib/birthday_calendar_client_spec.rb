@@ -17,7 +17,7 @@ RSpec.describe BirthdayCalendarClient do
     context "exists birthday" do
       let(:date) { Date.parse("2021-08-08") }
 
-      it { should contain_exactly("黒川冷（DJ.Coo）", "メルパン", "上葉みあ") }
+      it { should contain_exactly("黒川冷", "メルパン", "上葉みあ") }
     end
 
     context "not exists birthday" do
