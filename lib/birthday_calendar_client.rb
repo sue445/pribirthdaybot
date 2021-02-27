@@ -26,7 +26,9 @@ class BirthdayCalendarClient
 
   private
 
+  # @param series [String]
   # @return [Hash]
+  # @see https://github.com/sue445/pretty-all-friends-birthday-calendar/tree/master/config
   def fetch_config(series)
     content = URI.parse("https://raw.githubusercontent.com/sue445/pretty-all-friends-birthday-calendar/master/config/#{series}.yml").read
     YAML.load(content)
