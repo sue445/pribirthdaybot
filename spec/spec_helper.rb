@@ -2,6 +2,7 @@ require "webmock/rspec"
 require "rspec/its"
 
 require_relative "../lib/birthday_calendar_client"
+require_relative "../lib/bot"
 
 Dir["#{__dir__}/support/**/*.rb"].each {|f| require f }
 
