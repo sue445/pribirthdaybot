@@ -30,6 +30,8 @@ class Bot
       message << " ##{name}生誕祭#{year}"
     end
 
+    message << " https://sue445.github.io/pretty-all-friends-birthday-calendar/"
+
     message
   end
 
