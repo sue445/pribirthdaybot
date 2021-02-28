@@ -1,5 +1,4 @@
-require "webmock/rspec"
-require "rspec/its"
+Bundler.require(:test)
 
 require_relative "../lib/birthday_calendar_client"
 require_relative "../lib/bot"
