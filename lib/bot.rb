@@ -14,20 +14,20 @@ class Bot
       return
     end
 
-    message = generate_birthday_message(today.year, names)
+    message = generate_birthday_message(today, names)
     post_tweet(message)
   end
 
-  # @param year [Integer]
+  # @param date [Date]
   # @param names [Array<String>]
-  def generate_birthday_message(year, names)
-    message = "今日は"
+  def generate_birthday_message(date, names)
+    message = "#{date.month}/#{date.day}は"
     message << names.join("、")
     message << "の誕生日です！"
 
     names.each do |name|
-      message << " ##{name}誕生祭#{year}"
-      message << " ##{name}生誕祭#{year}"
+      message << " ##{name}誕生祭#{date.year}"
+      message << " ##{name}生誕祭#{date.year}"
     end
 
     message << " https://sue445.github.io/pretty-all-friends-birthday-calendar/"
