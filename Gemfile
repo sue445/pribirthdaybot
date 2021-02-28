@@ -11,5 +11,5 @@ gem "twitter"
 group :test do
   gem "rspec"
   gem "rspec-its"
-  gem "webmock"
+  gem "webmock", require: "webmock/rspec"
 end
