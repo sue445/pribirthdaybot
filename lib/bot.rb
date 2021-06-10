@@ -25,6 +25,12 @@ class Bot
     message << names.join("、")
     message << "の誕生日です！"
 
+    if names.include?("ファララ・ア・ラーム") && names.include?("ガァララ・ス・リープ")
+      message << " #ファララ生誕祭#{date.year} #ガァララ生誕祭#{date.year} #ファララガァララ生誕祭#{date.year}"
+
+      names.reject! { |name| %w(ファララ・ア・ラーム ガァララ・ス・リープ).include?(name) }
+    end
+
     names.each do |name|
       message << " ##{name}誕生祭#{date.year}"
       message << " ##{name}生誕祭#{date.year}"
