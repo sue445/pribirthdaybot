@@ -31,5 +31,12 @@ RSpec.describe Bot do
 
       it { should eq "6/10はガァララ・ス・リープ、ファララ・ア・ラーム、xxxxxの誕生日です！ #ファララ生誕祭2021 #ガァララ生誕祭2021 #ファララガァララ生誕祭2021 #xxxxx誕生祭2021 #xxxxx生誕祭2021 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
     end
+
+    context "with Jennifer" do
+      let(:date)  { Date.parse("2022-07-17") }
+      let(:names) { %w(ジェニファー・純恋・ソル) }
+
+      it { should eq "7/17はジェニファー・純恋・ソルの誕生日です！ #ジェニファー誕生祭2022 #ジェニファー生誕祭2022 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
+    end
   end
 end

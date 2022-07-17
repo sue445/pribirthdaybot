@@ -29,6 +29,10 @@ class Bot
       message << " #ファララ生誕祭#{date.year} #ガァララ生誕祭#{date.year} #ファララガァララ生誕祭#{date.year}"
 
       names.reject! { |name| %w(ファララ・ア・ラーム ガァララ・ス・リープ).include?(name) }
+    elsif names.include?("ジェニファー・純恋・ソル")
+      message << " #ジェニファー誕生祭#{date.year} #ジェニファー生誕祭#{date.year}"
+
+      names.reject! { |name| %w(ジェニファー・純恋・ソル).include?(name) }
     end
 
     names.each do |name|
