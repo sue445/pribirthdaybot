@@ -13,9 +13,9 @@ RSpec.describe Bot do
 
     context "with greater than 1 names" do
       let(:date)  { Date.parse("2021-08-08") }
-      let(:names) { %w(メルパン 上葉みあ 陽比野まつり 黒川冷) }
+      let(:names) { %w(みゃむ メルパン 上葉みあ 陽比野まつり 黒川冷) }
 
-      it { should eq "8/8はメルパン、上葉みあ、陽比野まつり、黒川冷の誕生日です！ #メルパン誕生祭2021 #メルパン生誕祭2021 #上葉みあ誕生祭2021 #上葉みあ生誕祭2021 #陽比野まつり誕生祭2021 #陽比野まつり生誕祭2021 #黒川冷誕生祭2021 #黒川冷生誕祭2021 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
+      it { should eq "8/8はみゃむ、メルパン、上葉みあ、陽比野まつり、黒川冷の誕生日です！ #陽比野まつり生誕祭2021 #みゃむ生誕祭2021 #まつりみゃむ生誕祭2021 #メルパン誕生祭2021 #メルパン生誕祭2021 #上葉みあ誕生祭2021 #上葉みあ生誕祭2021 #黒川冷誕生祭2021 #黒川冷生誕祭2021 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
     end
 
     context "with falala and garara" do

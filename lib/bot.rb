@@ -27,12 +27,17 @@ class Bot
 
     if names.include?("ファララ・ア・ラーム") && names.include?("ガァララ・ス・リープ")
       message << " #ファララ生誕祭#{date.year} #ガァララ生誕祭#{date.year} #ファララガァララ生誕祭#{date.year}"
-
       names.reject! { |name| %w(ファララ・ア・ラーム ガァララ・ス・リープ).include?(name) }
-    elsif names.include?("ジェニファー・純恋・ソル")
-      message << " #ジェニファー誕生祭#{date.year} #ジェニファー生誕祭#{date.year}"
+    end
 
+    if names.include?("ジェニファー・純恋・ソル")
+      message << " #ジェニファー誕生祭#{date.year} #ジェニファー生誕祭#{date.year}"
       names.reject! { |name| %w(ジェニファー・純恋・ソル).include?(name) }
+    end
+
+    if names.include?("陽比野まつり") && names.include?("みゃむ")
+      message << " #陽比野まつり生誕祭#{date.year} #みゃむ生誕祭#{date.year} #まつりみゃむ生誕祭#{date.year}"
+      names.reject! { |name| %w(陽比野まつり みゃむ).include?(name) }
     end
 
     names.each do |name|
