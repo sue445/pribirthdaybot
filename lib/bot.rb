@@ -1,6 +1,7 @@
 Bundler.require(:default)
 
 require_relative "./birthday_calendar_client"
+require_relative "./twitter_client"
 
 class Bot
   def perform
@@ -53,17 +54,8 @@ class Bot
   private
 
   def post_tweet(tweet)
-    twitter_client.update(tweet)
+    twitter = TwitterClient.new("pribirthdaybot")
+    twitter.post_tweet(tweet)
     puts tweet
-  end
-
-  def twitter_client
-    @twitter_client ||=
-      Twitter::REST::Client.new do |config|
-        config.consumer_key        = ENV["TWITTER_V1_CONSUMER_KEY"]
-        config.consumer_secret     = ENV["TWITTER_V1_CONSUMER_SECRET"]
-        config.access_token        = ENV["TWITTER_V1_ACCESS_TOKEN"]
-        config.access_token_secret = ENV["TWITTER_V1_ACCESS_TOKEN_SECRET"]
-      end
   end
 end
