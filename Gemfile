@@ -9,6 +9,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "activesupport", require: "active_support/all"
 gem "functions_framework"
 gem "google-cloud-firestore", require: "google/cloud/firestore"
+gem "sentry-ruby"
 
 # TODO: Use upstream after my patches are merged
 # gem "simple_twitter"
