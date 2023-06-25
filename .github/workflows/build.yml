@@ -126,6 +126,7 @@ jobs:
           SENTRY_PROJECT:    ${{ secrets.SENTRY_PROJECT }}
         with:
           environment: ${{ env.RACK_ENV }}
+          ignore_empty: true
 
       - name: Slack Notification
         uses: lazy-actions/slatify@master
