@@ -8,6 +8,9 @@ class Bot
     Time.zone = "Tokyo"
     today = Time.current.to_date
 
+    # TODO: API ping
+    pp twitter.get_me
+
     names = BirthdayCalendarClient.new.find_by_birthday(today)
 
     if names.empty?
@@ -54,8 +57,12 @@ class Bot
   private
 
   def post_tweet(tweet)
-    twitter = TwitterClient.new("pribirthdaybot")
     twitter.post_tweet(tweet)
     puts tweet
+  end
+
+  # @return [TwitterClient]
+  def twitter
+    @twitter ||= TwitterClient.new("pribirthdaybot")
   end
 end
