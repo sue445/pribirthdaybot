@@ -34,6 +34,11 @@ jobs:
 
       - run: bundle exec rspec
 
+      - name: verify functions-framework-ruby
+        run: |
+          set -xe
+          bundle exec functions-framework-ruby --verify --verbose --target pribirthdaybot
+
       - name: Slack Notification
         uses: lazy-actions/slatify@master
         if: always()
