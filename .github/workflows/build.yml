@@ -1,0 +1,46 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      # Ignore files that are not used in production
+      - "**.md"
+      - ".github/dependabot.yml"
+      - ".rspec"
+      - "spec/**"
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths-ignore:
+      # Ignore files that are not used in production
+      - "**.md"
+      - ".github/dependabot.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - run: bundle exec rspec
+
+      - name: Slack Notification
+        uses: lazy-actions/slatify@master
+        if: always()
+        continue-on-error: true
+        with:
+          job_name: test
+          type: ${{ job.status }}
+          icon_emoji: ":octocat:"
+          url: ${{ secrets.SLACK_WEBHOOK }}
+          token: ${{ secrets.GITHUB_TOKEN }}
