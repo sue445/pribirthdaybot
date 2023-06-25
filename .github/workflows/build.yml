@@ -21,6 +21,8 @@ on:
       - "**.md"
       - ".github/dependabot.yml"
 
+    workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
