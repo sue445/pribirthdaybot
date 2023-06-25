@@ -51,3 +51,79 @@ jobs:
           icon_emoji: ":octocat:"
           url: ${{ secrets.SLACK_WEBHOOK }}
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs:
+      - test
+
+    if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch' }}
+
+    env:
+      FUNCTION_LOGGING_LEVEL: info
+      FUNCTION_RUNTIME: ruby32
+
+      # e.g. projects/123456789/locations/global/workloadIdentityPools/github-actions/providers/github-actions
+      WORKLOAD_IDENTITY_PROVIDER: "projects/967853966304/locations/global/workloadIdentityPools/pribirthdaybot/providers/github-actions"
+
+      # e.g. terraform@GCP_PROJECT_ID.iam.gserviceaccount.com
+      SERVICE_ACCOUNT_EMAIL: "deployer@sue445-twitter-bots.iam.gserviceaccount.com"
+
+    runs-on: ubuntu-latest
+
+    concurrency: production
+    environment: production
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT_EMAIL }}
+
+      - name: GCP Authenticate
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          version: latest
+          project_id: ${{ env.GCP_PROJECT }}
+          install_components: "beta"
+
+      - name: Add credential path to .gcloudignore
+        run: |
+          # e.g.
+          # CREDENTIAL_FILE_PATH: /home/runner/work/pribirthdaybot/pribirthdaybot/a08afad6ea60285b8fd69e2e
+          # GITHUB_WORKSPACE: /home/runner/work/pribirthdaybot/pribirthdaybot
+          # After: a08afad6ea60285b8fd69e2e
+          echo $CREDENTIAL_FILE_PATH | sed -e "s#${GITHUB_WORKSPACE}/##g" >> .gcloudignore
+        env:
+          CREDENTIAL_FILE_PATH: ${{ steps.auth.outputs.credentials_file_path }}
+
+      - name: Deploy function
+        run: |
+          gcloud beta functions deploy pribirthdaybot \
+            --trigger-topic=cron_pribirthdaybot \
+            --gen2 \
+            --region=asia-northeast1 \
+            --memory=128Mi \
+            --runtime=${FUNCTION_RUNTIME} \
+            --timeout=10s \
+            --max-instances=1 \
+            --service-account=function-pribirthdaybot@sue445-twitter-bots.iam.gserviceaccount.com \
+            --set-env-vars=GOOGLE_CLOUD_PROJECT=${GCP_PROJECT},FUNCTION_LOGGING_LEVEL=${FUNCTION_LOGGING_LEVEL},RACK_ENV=production \
+            --set-secrets=TWITTER_V2_CLIENT_ID=pribirthdaybot-TWITTER_V2_CLIENT_ID:latest,TWITTER_V2_CLIENT_SECRET=pribirthdaybot-TWITTER_V2_CLIENT_SECRET:latest
+
+      - name: Slack Notification
+        uses: lazy-actions/slatify@master
+        if: always()
+        continue-on-error: true
+        with:
+          job_name: deploy
+          type: ${{ job.status }}
+          icon_emoji: ":octocat:"
+          url: ${{ secrets.SLACK_WEBHOOK }}
+          token: ${{ secrets.GITHUB_TOKEN }}
