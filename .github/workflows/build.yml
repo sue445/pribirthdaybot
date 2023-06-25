@@ -61,6 +61,7 @@ jobs:
     env:
       FUNCTION_LOGGING_LEVEL: info
       FUNCTION_RUNTIME: ruby32
+      RACK_ENV: production
 
       # e.g. projects/123456789/locations/global/workloadIdentityPools/github-actions/providers/github-actions
       WORKLOAD_IDENTITY_PROVIDER: "projects/967853966304/locations/global/workloadIdentityPools/pribirthdaybot/providers/github-actions"
@@ -114,7 +115,7 @@ jobs:
             --timeout=10s \
             --max-instances=1 \
             --service-account=function-pribirthdaybot@sue445-twitter-bots.iam.gserviceaccount.com \
-            --set-env-vars=GOOGLE_CLOUD_PROJECT=${GCP_PROJECT},FUNCTION_LOGGING_LEVEL=${FUNCTION_LOGGING_LEVEL},RACK_ENV=production,SENTRY_RELEASE=${GITHUB_SHA} \
+            --set-env-vars=GOOGLE_CLOUD_PROJECT=${GCP_PROJECT},FUNCTION_LOGGING_LEVEL=${FUNCTION_LOGGING_LEVEL},RACK_ENV=${RACK_ENV},SENTRY_RELEASE=${GITHUB_SHA} \
             --set-secrets=TWITTER_V2_CLIENT_ID=pribirthdaybot-TWITTER_V2_CLIENT_ID:latest,TWITTER_V2_CLIENT_SECRET=pribirthdaybot-TWITTER_V2_CLIENT_SECRET:latest,SENTRY_DSN=pribirthdaybot-SENTRY_DSN:latest
 
       - name: Create Sentry release
