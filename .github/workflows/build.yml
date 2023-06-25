@@ -114,8 +114,17 @@ jobs:
             --timeout=10s \
             --max-instances=1 \
             --service-account=function-pribirthdaybot@sue445-twitter-bots.iam.gserviceaccount.com \
-            --set-env-vars=GOOGLE_CLOUD_PROJECT=${GCP_PROJECT},FUNCTION_LOGGING_LEVEL=${FUNCTION_LOGGING_LEVEL},RACK_ENV=production \
-            --set-secrets=TWITTER_V2_CLIENT_ID=pribirthdaybot-TWITTER_V2_CLIENT_ID:latest,TWITTER_V2_CLIENT_SECRET=pribirthdaybot-TWITTER_V2_CLIENT_SECRET:latest
+            --set-env-vars=GOOGLE_CLOUD_PROJECT=${GCP_PROJECT},FUNCTION_LOGGING_LEVEL=${FUNCTION_LOGGING_LEVEL},RACK_ENV=production,SENTRY_RELEASE=${GITHUB_SHA} \
+            --set-secrets=TWITTER_V2_CLIENT_ID=pribirthdaybot-TWITTER_V2_CLIENT_ID:latest,TWITTER_V2_CLIENT_SECRET=pribirthdaybot-TWITTER_V2_CLIENT_SECRET:latest,SENTRY_DSN=pribirthdaybot-SENTRY_DSN:latest
+
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG:        ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT:    ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: ${{ env.RACK_ENV }}
 
       - name: Slack Notification
         uses: lazy-actions/slatify@master
