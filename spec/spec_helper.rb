@@ -1,4 +1,6 @@
-Bundler.require(:test)
+ENV["RACK_ENV"] = "test"
+
+Bundler.require(:default, ENV["RACK_ENV"])
 
 require_relative "../lib/birthday_calendar_client"
 require_relative "../lib/bot"
