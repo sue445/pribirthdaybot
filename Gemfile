@@ -16,6 +16,7 @@ gem "sentry-ruby"
 gem "simple_twitter", github: "sue445/simple_twitter", branch: "develop"
 
 gem "twitter_oauth2"
+gem "uri", ">= 0.12.2" # for CVE-2023-36617
 
 group :test do
   gem "rspec"

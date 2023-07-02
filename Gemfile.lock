@@ -161,6 +161,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    uri (0.12.2)
     webmock (3.18.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -179,6 +180,7 @@ DEPENDENCIES
   sentry-ruby
   simple_twitter!
   twitter_oauth2
+  uri (>= 0.12.2)
   webmock
 
 RUBY VERSION
