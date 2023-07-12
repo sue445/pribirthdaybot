@@ -2,11 +2,11 @@ Bundler.require(:default)
 
 require_relative "./birthday_calendar_client"
 require_relative "./twitter_client"
+require_relative "./date_util"
 
 class Bot
   def perform
-    Time.zone = "Tokyo"
-    today = Time.current.to_date
+    today = DateUtil.jst_date
 
     names = BirthdayCalendarClient.new.find_by_birthday(today)
 

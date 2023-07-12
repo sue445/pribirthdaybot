@@ -4,6 +4,7 @@ Bundler.require(:default, ENV["RACK_ENV"])
 
 require_relative "../lib/birthday_calendar_client"
 require_relative "../lib/bot"
+require_relative "../lib/date_util"
 
 Dir["#{__dir__}/support/**/*.rb"].each {|f| require f }
 
