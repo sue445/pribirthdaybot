@@ -54,8 +54,8 @@ class Bot
   private
 
   def post_tweet(tweet)
-    twitter.post_tweet(tweet)
     puts tweet
+    twitter.post_tweet(tweet)
   end
 
   # @return [TwitterClient]
