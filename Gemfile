@@ -6,7 +6,6 @@ ruby "~> 3.2.0"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "activesupport", require: "active_support/all"
 gem "functions_framework"
 gem "google-cloud-firestore", require: "google/cloud/firestore"
 gem "sentry-ruby"
