@@ -41,6 +41,10 @@ class Bot
       names.reject! { |name| %w(陽比野まつり みゃむ).include?(name) }
     end
 
+    if names.include?("幸多みちる")
+      message << " #ミーチル誕生祭#{date.year} #ミーチル生誕祭#{date.year}"
+    end
+
     names.each do |name|
       message << " ##{name}誕生祭#{date.year}"
       message << " ##{name}生誕祭#{date.year}"
