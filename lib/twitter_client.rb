@@ -15,12 +15,12 @@ class TwitterClient
 
   # @return [Hash]
   def get_me
-    get("#{API_ENDPOINT}/users/me")
+    simple_twitter_client.get("#{API_ENDPOINT}/users/me")
   end
 
   # @param [String] text
   def post_tweet(text)
-    post_with_json("#{API_ENDPOINT}/tweets", text: text)
+    simple_twitter_client.post("#{API_ENDPOINT}/tweets", json: { text: text })
   end
 
   private
@@ -51,23 +51,5 @@ class TwitterClient
   # @return [SimpleTwitter::Client]
   def simple_twitter_client
     @simple_twitter_client ||= SimpleTwitter::Client.new(bearer_token: access_token)
-  end
-
-  # @param url [String]
-  # @param params [Hash]
-  def get(url, params = {})
-    simple_twitter_client.get(url, params)
-  end
-
-  # @param url [String]
-  # @param params [Hash]
-  def post(url, params = {})
-    simple_twitter_client.post(url, params)
-  end
-
-  # @param url [String]
-  # @param params [Hash]
-  def post_with_json(url, params = {})
-    simple_twitter_client.post(url, {}, params)
   end
 end
