@@ -5,9 +5,6 @@ require_relative "user_token_store"
 class TwitterClient
   API_ENDPOINT = "https://api.twitter.com/2"
 
-  class Error < StandardError
-  end
-
   # @param [String] user_name
   def initialize(user_name)
     @user_name = user_name
