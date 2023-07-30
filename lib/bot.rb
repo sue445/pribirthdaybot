@@ -11,7 +11,12 @@ class Bot
     names = BirthdayCalendarClient.new.find_by_birthday(today)
 
     if names.empty?
-      puts "#{today} is not nobody's birthday"
+      FunctionsFramework.logger.info "#{today} is not nobody's birthday"
+
+      # Twitter API ping test
+      current_user = twitter.get_me
+      FunctionsFramework.logger.debug "current_user=#{current_user}"
+
       return
     end
 
