@@ -12,6 +12,10 @@ class Bot
 
     if names.empty?
       puts "#{today} is not nobody's birthday"
+
+      # Twitter API ping test
+      current_user = twitter.get_me
+      puts "current_user=#{current_user}"
       return
     end
 
