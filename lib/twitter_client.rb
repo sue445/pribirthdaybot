@@ -12,12 +12,16 @@ class TwitterClient
 
   # @return [Hash]
   def get_me
-    simple_twitter_client.get("#{API_ENDPOINT}/users/me")
+    with_error_handling do
+      simple_twitter_client.get("#{API_ENDPOINT}/users/me")
+    end
   end
 
   # @param [String] text
   def post_tweet(text)
-    simple_twitter_client.post("#{API_ENDPOINT}/tweets", json: { text: text })
+    with_error_handling do
+      simple_twitter_client.post("#{API_ENDPOINT}/tweets", json: { text: text })
+    end
   end
 
   private
@@ -48,5 +52,19 @@ class TwitterClient
   # @return [SimpleTwitter::Client]
   def simple_twitter_client
     @simple_twitter_client ||= SimpleTwitter::Client.new(bearer_token: access_token)
+  end
+
+  def with_error_handling
+    yield
+  rescue SimpleTwitter::Error => e
+    # NOTE: detail field in response body has been filtered on Sentry...
+    FunctionsFramework.logger.error "error=#{e}, response_body=#{e.body}, response_headers=#{e.raw_response.headers.to_h}"
+
+    Sentry.set_extras(
+      response_body:    e.body,
+      status_code:      e.raw_response.code,
+      response_headers: e.raw_response.headers.to_h,
+    )
+    raise e
   end
 end
