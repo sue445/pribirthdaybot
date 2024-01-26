@@ -6,7 +6,7 @@ RSpec.describe BirthdayCalendarClient do
 
     include_context :setup_birthday_calendar_stub
 
-    its(:count) { should eq 90 }
+    its(:count) { should eq 92 }
   end
 
   describe "#find_by_birthday" do
@@ -24,6 +24,12 @@ RSpec.describe BirthdayCalendarClient do
       let(:date) { Date.parse("2021-08-10") }
 
       it { should eq [] }
+    end
+
+    context "exists birthday (aipri)" do
+      let(:date) { Date.parse("2024-08-18") }
+
+      it { should eq %w(夢川ゆい 青空ひまり) }
     end
   end
 end
