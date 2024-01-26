@@ -25,5 +25,11 @@ RSpec.describe BirthdayCalendarClient do
 
       it { should eq [] }
     end
+
+    context "exists birthday (aipri)" do
+      let(:date) { Date.parse("2024-08-18") }
+
+      it { should eq %w(夢川ゆい 青空ひまり) }
+    end
   end
 end
