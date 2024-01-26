@@ -6,7 +6,7 @@ RSpec.describe BirthdayCalendarClient do
 
     include_context :setup_birthday_calendar_stub
 
-    its(:count) { should eq 90 }
+    its(:count) { should eq 92 }
   end
 
   describe "#find_by_birthday" do
