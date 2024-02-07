@@ -10,10 +10,12 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     aes_key_wrap (1.1.0)
     attr_required (1.0.1)
+    bigdecimal (3.1.6)
     bindata (2.4.15)
     cloud_events (0.7.0)
     concurrent-ruby (1.2.3)
-    crack (0.4.5)
+    crack (0.4.6)
+      bigdecimal
       rexml
     diff-lcs (1.5.1)
     domain_name (0.5.20190701)
@@ -81,7 +83,7 @@ GEM
     grpc (1.60.0-x86_64-linux)
       google-protobuf (~> 3.25)
       googleapis-common-protos-types (~> 1.0)
-    hashdiff (1.0.1)
+    hashdiff (1.1.0)
     http (5.1.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -157,7 +159,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     uri (0.13.0)
-    webmock (3.19.1)
+    webmock (3.20.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
