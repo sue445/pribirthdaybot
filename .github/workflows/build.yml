@@ -42,15 +42,12 @@ jobs:
           bundle exec functions-framework-ruby --verify --verbose --target pribirthdaybot
 
       - name: Slack Notification
-        uses: lazy-actions/slatify@master
+        uses: act10ns/slack@v2
         if: always()
         continue-on-error: true
         with:
-          job_name: test
-          type: ${{ job.status }}
-          icon_emoji: ":octocat:"
-          url: ${{ secrets.SLACK_WEBHOOK }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          status: ${{ job.status }}
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
 
   deploy:
     needs:
@@ -130,12 +127,9 @@ jobs:
           ignore_empty: true
 
       - name: Slack Notification
-        uses: lazy-actions/slatify@master
+        uses: act10ns/slack@v2
         if: always()
         continue-on-error: true
         with:
-          job_name: deploy
-          type: ${{ job.status }}
-          icon_emoji: ":octocat:"
-          url: ${{ secrets.SLACK_WEBHOOK }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          status: ${{ job.status }}
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
