@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "collection_store"
-
 class UserTokenStore
   # @param user_name [String]
   def initialize(user_name)
@@ -16,13 +14,13 @@ class UserTokenStore
 
   # @param [String]
   def set_refresh_token(refresh_token)
-    store.set(@user_name, refresh_token: refresh_token)
+    store.set(@user_name, refresh_token: refresh_token, updated_at: Time.now)
   end
 
   private
 
-  # @return [CollectionStore]
+  # @return [Kagaribi::Collection]
   def store
-    @store ||= CollectionStore.new("user_token")
+    @store ||= Kagaribi.collection("user_token")
   end
 end
