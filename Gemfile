@@ -7,7 +7,7 @@ ruby "~> 3.2.0"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "functions_framework"
-gem "google-cloud-firestore", require: "google/cloud/firestore"
+gem "kagaribi"
 gem "sentry-ruby"
 gem "simple_twitter", ">= 2.0.0"
 gem "twitter_oauth2"
