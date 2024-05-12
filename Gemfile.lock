@@ -112,7 +112,7 @@ GEM
       faraday-follow_redirects
     jwt (2.8.1)
       base64
-    kagaribi (0.1.0)
+    kagaribi (0.1.1)
       google-cloud-firestore
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
@@ -124,7 +124,7 @@ GEM
       uri
     nio4r (2.7.3)
     os (1.1.4)
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
     rack (3.0.11)
