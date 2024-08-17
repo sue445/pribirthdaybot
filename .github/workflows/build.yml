@@ -57,7 +57,7 @@ jobs:
 
     env:
       FUNCTION_LOGGING_LEVEL: info
-      FUNCTION_RUNTIME: ruby32
+      FUNCTION_RUNTIME: ruby33
       RACK_ENV: production
 
       # e.g. projects/123456789/locations/global/workloadIdentityPools/github-actions/providers/github-actions
