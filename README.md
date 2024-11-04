@@ -4,4 +4,5 @@ Post birthday of [Pretty Series](https://en.wikipedia.org/wiki/Pretty_Rhythm) ([
 [![build](https://github.com/sue445/pribirthdaybot/actions/workflows/build.yml/badge.svg)](https://github.com/sue445/pribirthdaybot/actions/workflows/build.yml)
 
 * https://x.com/pribirthdaybot
+* https://twilog.togetter.com/pribirthdaybot
 * https://sue445.github.io/pretty-all-friends-birthday-calendar/
