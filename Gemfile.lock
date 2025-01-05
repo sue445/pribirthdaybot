@@ -40,7 +40,7 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    functions_framework (1.4.2)
+    functions_framework (1.5.0)
       cloud_events (>= 0.7.0, < 2.a)
       puma (>= 4.3.0, < 7.a)
       rack (>= 2.1, < 4.a)
@@ -122,12 +122,12 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
-    nio4r (2.7.3)
+    nio4r (2.7.4)
     os (1.1.4)
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
-    rack (3.1.7)
+    rack (3.1.8)
     rack-oauth2 (1.21.3)
       activesupport
       attr_required
