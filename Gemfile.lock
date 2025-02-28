@@ -199,7 +199,6 @@ PLATFORMS
   arm64-darwin-22
   arm64-darwin-24
   x86_64-linux
-  x86_64-linux-gnu
 
 DEPENDENCIES
   functions_framework
