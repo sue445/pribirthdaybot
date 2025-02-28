@@ -45,5 +45,12 @@ RSpec.describe Bot do
 
       it { should eq "7/13は幸多みちるの誕生日です！ #ミーチル誕生祭2023 #ミーチル生誕祭2023 #幸多みちる誕生祭2023 #幸多みちる生誕祭2023 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
     end
+
+    context "with Amari and Mario" do
+      let(:date)  { Date.parse("2024-02-29") }
+      let(:names) { %w(マリオ 一条シン 如月ルヰ 香田澄あまり) }
+
+      it { should eq "2/29はマリオ、一条シン、如月ルヰ、香田澄あまりの誕生日です！#香田澄あまり誕生祭2024 #香田澄あまり生誕祭2024 #マリオ誕生祭2024 #マリオ生誕祭2024 #アマリオン合神祭2024 #一条シン誕生祭2024 #一条シン生誕祭2024 #如月ルヰ誕生祭2024 #如月ルヰ生誕祭2024 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
+    end
   end
 end

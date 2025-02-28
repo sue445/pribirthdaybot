@@ -50,6 +50,11 @@ class Bot
       message << " #ミーチル誕生祭#{date.year} #ミーチル生誕祭#{date.year}"
     end
 
+    if names.include?("香田澄あまり") && names.include?("マリオ")
+      message << "#香田澄あまり誕生祭#{date.year} #香田澄あまり生誕祭#{date.year} #マリオ誕生祭#{date.year} #マリオ生誕祭#{date.year} #アマリオン合神祭#{date.year}"
+      names.reject! { |name| %w(香田澄あまり マリオ).include?(name) }
+    end
+
     names.each do |name|
       message << " ##{name}誕生祭#{date.year}"
       message << " ##{name}生誕祭#{date.year}"
