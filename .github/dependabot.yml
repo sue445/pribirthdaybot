@@ -9,7 +9,7 @@ updates:
     ignore:
       - dependency-name: "getsentry/action-release"
         versions:
-          #  # c.f. https://github.com/getsentry/action-release/issues/258
+          # c.f. https://github.com/getsentry/action-release/issues/258
           - "2"
 
   - package-ecosystem: bundler
