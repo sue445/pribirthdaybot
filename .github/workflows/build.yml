@@ -116,7 +116,7 @@ jobs:
             --set-secrets=TWITTER_V2_CLIENT_ID=pribirthdaybot-TWITTER_V2_CLIENT_ID:latest,TWITTER_V2_CLIENT_SECRET=pribirthdaybot-TWITTER_V2_CLIENT_SECRET:latest,SENTRY_DSN=pribirthdaybot-SENTRY_DSN:latest
 
       - name: Create Sentry release
-        uses: getsentry/action-release@v1
+        uses: getsentry/action-release@v3
         continue-on-error: true
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
