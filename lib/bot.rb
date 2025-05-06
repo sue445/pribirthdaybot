@@ -56,8 +56,14 @@ class Bot
     end
 
     names.each do |name|
-      message << " ##{name}誕生祭#{date.year}"
-      message << " ##{name}生誕祭#{date.year}"
+      year = date.year
+      case name
+      when "らぁるる"
+        year += 1000
+      end
+
+      message << " ##{name}誕生祭#{year}"
+      message << " ##{name}生誕祭#{year}"
     end
 
     message << " https://sue445.github.io/pretty-all-friends-birthday-calendar/"
