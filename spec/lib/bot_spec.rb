@@ -52,5 +52,12 @@ RSpec.describe Bot do
 
       it { should eq "2/29はマリオ、一条シン、如月ルヰ、香田澄あまりの誕生日です！#香田澄あまり誕生祭2024 #香田澄あまり生誕祭2024 #マリオ誕生祭2024 #マリオ生誕祭2024 #アマリオン合神祭2024 #一条シン誕生祭2024 #一条シン生誕祭2024 #如月ルヰ誕生祭2024 #如月ルヰ生誕祭2024 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
     end
+
+    context "with Raaruru" do
+      let(:date)  { Date.parse("2025-05-05") }
+      let(:names) { %w(ぱたの らぁるる 仁科カヅキ) }
+
+      it { should eq "5/5はぱたの、らぁるる、仁科カヅキの誕生日です！ #ぱたの誕生祭2025 #ぱたの生誕祭2025 #らぁるる誕生祭3025 #らぁるる生誕祭3025 #仁科カヅキ誕生祭2025 #仁科カヅキ生誕祭2025 https://sue445.github.io/pretty-all-friends-birthday-calendar/" }
+    end
   end
 end
