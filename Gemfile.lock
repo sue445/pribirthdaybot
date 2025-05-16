@@ -80,10 +80,10 @@ GEM
       gapic-common (~> 1.0)
       google-cloud-errors (~> 1.0)
     google-logging-utils (0.2.0)
-    google-protobuf (4.31.0-arm64-darwin)
+    google-protobuf (4.30.2-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.0-x86_64-linux-gnu)
+    google-protobuf (4.30.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
     googleapis-common-protos (1.8.0)
@@ -203,6 +203,7 @@ PLATFORMS
 DEPENDENCIES
   ffi (< 1.17.0)
   functions_framework
+  google-protobuf (< 4.31.0)
   kagaribi
   rspec
   rspec-its
