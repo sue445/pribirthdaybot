@@ -130,7 +130,7 @@ GEM
       faraday-follow_redirects
     jwt (2.10.1)
       base64
-    kagaribi (0.2.0)
+    kagaribi (0.2.1)
       google-cloud-firestore
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
