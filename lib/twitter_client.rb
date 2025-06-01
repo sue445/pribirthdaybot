@@ -35,10 +35,13 @@ class TwitterClient
       secret:     ENV["TWITTER_V2_CLIENT_SECRET"],
     )
 
+    # Get refresh token from Firestore
     oauth2.refresh_token = user_token_store.get_refresh_token
 
+    # Get access tokenn with refresh token
     ret = oauth2.access_token!
 
+    # Save refresh token to Firestore before returning access token
     user_token_store.set_refresh_token(ret.refresh_token)
 
     @access_token = ret.access_token
