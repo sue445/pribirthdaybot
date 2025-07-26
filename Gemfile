@@ -42,6 +42,11 @@ gem "ffi", "< 1.17.0"
 # * https://github.com/GoogleCloudPlatform/buildpacks/issues/508
 gem "google-protobuf", "< 4.31.0"
 
+# FIXME: There is no x86-linux gem after 1.74.0+.
+#        Due to the following issues, deployment to Cloud Run functions has failed, so I'm locking at 1.73.
+#        https://github.com/GoogleCloudPlatform/buildpacks/issues/508
+gem "grpc", "< 1.74.0"
+
 group :test do
   gem "rspec"
   gem "rspec-its"
