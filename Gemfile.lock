@@ -146,7 +146,7 @@ GEM
     public_suffix (6.0.2)
     puma (6.6.0)
       nio4r (~> 2.0)
-    rack (3.2.0)
+    rack (3.2.2)
     rack-oauth2 (1.21.3)
       activesupport
       attr_required
