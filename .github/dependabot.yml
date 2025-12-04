@@ -1,21 +1,21 @@
 version: 2
 updates:
+  ###########################################################
+  # NOTE: following sections are auto generated. DO NOT EDIT!
+  ###########################################################
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
       time: "05:00"
       timezone: Asia/Tokyo
-    cooldown:
-      default-days: 7
     assignees:
       - sue445
-    ignore:
-      - dependency-name: "getsentry/action-release"
-        versions:
-          # c.f. https://github.com/getsentry/action-release/issues/258
-          - "2"
-
+    cooldown:
+      default-days: 7
+      exclude:
+        - ruby/setup-ruby
+  ###########################################################
   - package-ecosystem: bundler
     directory: "/"
     schedule:
