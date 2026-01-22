@@ -23,7 +23,7 @@ GEM
     bigdecimal (3.3.1)
     bindata (2.5.1)
     cloud_events (0.7.1)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.6)
     connection_pool (2.5.3)
     crack (1.0.1)
       bigdecimal
@@ -172,7 +172,7 @@ GEM
       rspec-support (~> 3.13.0)
     rspec-support (3.13.6)
     securerandom (0.4.1)
-    sentry-ruby (6.2.0)
+    sentry-ruby (6.3.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     signet (0.21.0)
@@ -224,7 +224,7 @@ CHECKSUMS
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   bindata (2.5.1) sha256=53186a1ec2da943d4cb413583d680644eb810aacbf8902497aac8f191fad9e58
   cloud_events (0.7.1) sha256=a7083749ee917131a776e30ea98e2e63f9bcc4a724180c1e6f4324b2f8a4f570
-  concurrent-ruby (1.3.5) sha256=813b3e37aca6df2a21a3b9f1d497f8cbab24a2b94cab325bffe65ee0f6cbebc6
+  concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
   connection_pool (2.5.3) sha256=cfd74a82b9b094d1ce30c4f1a346da23ee19dc8a062a16a85f58eab1ced4305b
   crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
@@ -284,7 +284,7 @@ CHECKSUMS
   rspec-mocks (3.13.6) sha256=78b137ae5e91c5072bf81d40d78189aa911e965a81adc245e2d8d9ba624d9b4e
   rspec-support (3.13.6) sha256=2e8de3702427eab064c9352fe74488cc12a1bfae887ad8b91cba480ec9f8afb2
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  sentry-ruby (6.2.0) sha256=d7b8a358a3a0d0536bd194b19cc282c85f295b6d242731e9b4a934ccdb71ac17
+  sentry-ruby (6.3.0) sha256=14b5806b25d5101002959e21ed1970cb48c038bda3ac0713c1b9a3f1b746f2a5
   signet (0.21.0) sha256=d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b
   simple_oauth (0.3.1) sha256=147992e2c872c5b3cb97292e4a4ef099c9dbb76112760002ad93f1534d8c8937
   simple_twitter (2.2.3) sha256=062a02891a2ea22e6e5b35f791a40ce158bb30f711be8bc1e4e757bae57dda01
