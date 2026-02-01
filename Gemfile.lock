@@ -22,6 +22,7 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.3.1)
     bindata (2.5.1)
+    cgi (0.5.1)
     cloud_events (0.7.1)
     concurrent-ruby (1.3.6)
     connection_pool (2.5.3)
@@ -180,7 +181,9 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 4.0)
       multi_json (~> 1.10)
-    simple_oauth (0.3.1)
+    simple_oauth (0.4.0)
+      base64
+      cgi
     simple_twitter (2.2.3)
       http (>= 4)
       simple_oauth (>= 0.3.1)
@@ -209,6 +212,7 @@ DEPENDENCIES
   rspec
   rspec-its
   sentry-ruby
+  simple_oauth (>= 0.4.0)
   simple_twitter (>= 2.0.0)
   twitter_oauth2
   uri (>= 0.12.2)
@@ -223,6 +227,7 @@ CHECKSUMS
   benchmark (0.4.1) sha256=d4ef40037bba27f03b28013e219b950b82bace296549ec15a78016552f8d2cce
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   bindata (2.5.1) sha256=53186a1ec2da943d4cb413583d680644eb810aacbf8902497aac8f191fad9e58
+  cgi (0.5.1) sha256=e93fcafc69b8a934fe1e6146121fa35430efa8b4a4047c4893764067036f18e9
   cloud_events (0.7.1) sha256=a7083749ee917131a776e30ea98e2e63f9bcc4a724180c1e6f4324b2f8a4f570
   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
   connection_pool (2.5.3) sha256=cfd74a82b9b094d1ce30c4f1a346da23ee19dc8a062a16a85f58eab1ced4305b
@@ -286,7 +291,7 @@ CHECKSUMS
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   sentry-ruby (6.3.0) sha256=14b5806b25d5101002959e21ed1970cb48c038bda3ac0713c1b9a3f1b746f2a5
   signet (0.21.0) sha256=d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b
-  simple_oauth (0.3.1) sha256=147992e2c872c5b3cb97292e4a4ef099c9dbb76112760002ad93f1534d8c8937
+  simple_oauth (0.4.0) sha256=cf612384951251401404ac823201efeeea78e7921dac7ea1b55fccb7422fcd7e
   simple_twitter (2.2.3) sha256=062a02891a2ea22e6e5b35f791a40ce158bb30f711be8bc1e4e757bae57dda01
   twitter_oauth2 (0.5.3) sha256=4e992e28983055b5b82a70484fc3b70ae604af63373512cbaf6a650cfa0db4e1
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b

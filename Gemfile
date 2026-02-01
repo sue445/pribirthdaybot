@@ -9,6 +9,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "functions_framework"
 gem "kagaribi"
 gem "sentry-ruby"
+gem "simple_oauth", ">= 0.4.0"
 gem "simple_twitter", ">= 2.0.0"
 gem "twitter_oauth2"
 gem "uri", ">= 0.12.2" # for CVE-2023-36617
