@@ -173,7 +173,7 @@ GEM
       rspec-support (~> 3.13.0)
     rspec-support (3.13.6)
     securerandom (0.4.1)
-    sentry-ruby (6.3.1)
+    sentry-ruby (6.4.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
       logger
@@ -290,7 +290,7 @@ CHECKSUMS
   rspec-mocks (3.13.6) sha256=78b137ae5e91c5072bf81d40d78189aa911e965a81adc245e2d8d9ba624d9b4e
   rspec-support (3.13.6) sha256=2e8de3702427eab064c9352fe74488cc12a1bfae887ad8b91cba480ec9f8afb2
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  sentry-ruby (6.3.1) sha256=b2de4e9bada1053a36f4224d75617a2b44d33157e9030b20b86a791358c2e154
+  sentry-ruby (6.4.0) sha256=562bee79aea8f92825ac9df3ea01cc7788f9170d382f8d38947895280dc3be06
   signet (0.21.0) sha256=d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b
   simple_oauth (0.4.0) sha256=cf612384951251401404ac823201efeeea78e7921dac7ea1b55fccb7422fcd7e
   simple_twitter (2.2.3) sha256=062a02891a2ea22e6e5b35f791a40ce158bb30f711be8bc1e4e757bae57dda01
