@@ -104,13 +104,10 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (>= 0.16, < 2.a)
-    grpc (1.73.0)
+    grpc (1.78.1-arm64-darwin)
       google-protobuf (>= 3.25, < 5.0)
       googleapis-common-protos-types (~> 1.0)
-    grpc (1.73.0-arm64-darwin)
-      google-protobuf (>= 3.25, < 5.0)
-      googleapis-common-protos-types (~> 1.0)
-    grpc (1.73.0-x86_64-linux)
+    grpc (1.78.1-x86_64-linux-gnu)
       google-protobuf (>= 3.25, < 5.0)
       googleapis-common-protos-types (~> 1.0)
     hashdiff (1.2.1)
@@ -217,7 +214,6 @@ DEPENDENCIES
   ffi (< 1.17.0)
   functions_framework
   google-protobuf (< 4.31.0)
-  grpc (< 1.74.0)
   kagaribi
   rspec
   rspec-its
@@ -266,9 +262,8 @@ CHECKSUMS
   googleapis-common-protos (1.9.0) sha256=207be372d8d25e3876e1e1155d057e14f3c92f8f5428772864a8ce04a0b756e4
   googleapis-common-protos-types (1.22.0) sha256=f97492b77bd6da0018c860d5004f512fe7cd165554d7019a8f4df6a56fbfc4c7
   googleauth (1.16.0) sha256=1e7b5c2ee7edc6a0f5a4a4312c579b3822dc0be2679d6d09ca19d8c7ca5bd5f1
-  grpc (1.73.0) sha256=4055f35116f83e4c365d3b516416dad44e20e0e5f35285ff2cea04c284edc98c
-  grpc (1.73.0-arm64-darwin) sha256=20290674ab4181faf4459c217ab7d0b220e69bb318e6d3f32e4a30b0b28f8557
-  grpc (1.73.0-x86_64-linux) sha256=9beba2799ce281e6907b283ee21dfadc213cae98e1d6b7fadecd954078773d0c
+  grpc (1.78.1-arm64-darwin) sha256=7378b58db8dc65b19dce8006a47c0da30f1faf5d07160d2e1816c31126d3a388
+  grpc (1.78.1-x86_64-linux-gnu) sha256=c0715fe9bc80cf21fbaca2713abf8db6f628f6f31ec1d8762b667151e6ab0c9f
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
   http (5.3.1) sha256=c50802d8e9be3926cb84ac3b36d1a31fbbac383bc4cbecdce9053cb604231d7d
   http-cookie (1.1.0) sha256=38a5e60d1527eebc396831b8c4b9455440509881219273a6c99943d29eadbb19
