@@ -2,9 +2,7 @@
 
 source "https://rubygems.org"
 
-# FIXME: Deploy error when Ruby 4.0
-# ref. https://github.com/sue445/pribirthdaybot/issues/218
-ruby "~> 3.4.0"
+ruby "~> 4.0.0"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
@@ -44,11 +42,6 @@ gem "ffi", "< 1.17.0"
 # * https://github.com/sue445/pribirthdaybot/issues/158
 # * https://github.com/GoogleCloudPlatform/buildpacks/issues/508
 gem "google-protobuf", "< 4.31.0"
-
-# FIXME: There is no x86-linux gem after 1.74.0+.
-#        Due to the following issues, deployment to Cloud Run functions has failed, so I'm locking at 1.73.
-#        https://github.com/GoogleCloudPlatform/buildpacks/issues/508
-gem "grpc", "< 1.74.0"
 
 group :test do
   gem "rspec"
