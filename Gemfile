@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+# FIXME: Deploy error when Ruby 4.0
+# ref. https://github.com/sue445/pribirthdaybot/issues/218
 ruby "~> 3.4.0"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
