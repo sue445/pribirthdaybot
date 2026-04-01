@@ -41,11 +41,6 @@ GEM
       net-http (~> 0.5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ffi (1.17.3-arm64-darwin)
-    ffi (1.17.3-x86_64-linux-gnu)
-    ffi-compiler (1.3.2)
-      ffi (>= 1.15.5)
-      rake
     functions_framework (1.6.2)
       cloud_events (>= 0.7.0, < 2.a)
       puma (>= 4.3.0, < 7.a)
@@ -108,14 +103,11 @@ GEM
       google-protobuf (>= 3.25, < 5.0)
       googleapis-common-protos-types (~> 1.0)
     hashdiff (1.2.1)
-    http (5.3.1)
-      addressable (~> 2.8)
+    http (6.0.2)
       http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.5.0)
+      llhttp (~> 0.6.1)
     http-cookie (1.1.0)
       domain_name (~> 0.5)
-    http-form_data (2.3.0)
     httpclient (2.9.0)
       mutex_m
     i18n (1.14.8)
@@ -132,9 +124,7 @@ GEM
       base64
     kagaribi (0.2.2)
       google-cloud-firestore
-    llhttp-ffi (0.5.1)
-      ffi-compiler (~> 1.0)
-      rake (~> 13.0)
+    llhttp (0.6.1)
     logger (1.7.0)
     minitest (6.0.2)
       drb (~> 2.0)
@@ -188,7 +178,7 @@ GEM
     simple_oauth (0.4.0)
       base64
       cgi
-    simple_twitter (2.2.3)
+    simple_twitter (2.3.0)
       http (>= 4)
       simple_oauth (>= 0.3.1)
     twitter_oauth2 (0.5.3)
@@ -239,9 +229,6 @@ CHECKSUMS
   faraday-follow_redirects (0.5.0) sha256=5cde93c894b30943a5d2b93c2fe9284216a6b756f7af406a1e55f211d97d10ad
   faraday-net_http (3.4.2) sha256=f147758260d3526939bf57ecf911682f94926a3666502e24c69992765875906c
   faraday-retry (2.4.0) sha256=7b79c48fb7e56526faf247b12d94a680071ff40c9fda7cf1ec1549439ad11ebe
-  ffi (1.17.3-arm64-darwin) sha256=0c690555d4cee17a7f07c04d59df39b2fba74ec440b19da1f685c6579bb0717f
-  ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f
-  ffi-compiler (1.3.2) sha256=a94f3d81d12caf5c5d4ecf13980a70d0aeaa72268f3b9cc13358bcc6509184a0
   functions_framework (1.6.2) sha256=1fd21c14206a9cf6a1f4514c0d4e6d85162691ec0f1ae2e93db6f96dedbecf1f
   gapic-common (1.2.0) sha256=b477ec1eebbed7eed80efc04267369ce623e18b14e573c806e8920f76dc60dde
   google-cloud-core (1.8.0) sha256=e572edcbf189cfcab16590628a516cec3f4f63454b730e59f0b36575120281cf
@@ -259,16 +246,15 @@ CHECKSUMS
   grpc (1.78.1-arm64-darwin) sha256=7378b58db8dc65b19dce8006a47c0da30f1faf5d07160d2e1816c31126d3a388
   grpc (1.78.1-x86_64-linux-gnu) sha256=c0715fe9bc80cf21fbaca2713abf8db6f628f6f31ec1d8762b667151e6ab0c9f
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
-  http (5.3.1) sha256=c50802d8e9be3926cb84ac3b36d1a31fbbac383bc4cbecdce9053cb604231d7d
+  http (6.0.2) sha256=be337816fb45cee712eeb0829a16d9300c9d2b87b38b771d177d7a59f77e8b83
   http-cookie (1.1.0) sha256=38a5e60d1527eebc396831b8c4b9455440509881219273a6c99943d29eadbb19
-  http-form_data (2.3.0) sha256=cc4eeb1361d9876821e31d7b1cf0b68f1cf874b201d27903480479d86448a5f3
   httpclient (2.9.0) sha256=4b645958e494b2f86c2f8a2f304c959baa273a310e77a2931ddb986d83e498c8
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   json (2.19.2) sha256=e7e1bd318b2c37c4ceee2444841c86539bc462e81f40d134cf97826cb14e83cf
   json-jwt (1.17.0) sha256=6ff99026b4c54281a9431179f76ceb81faa14772d710ef6169785199caadc4cc
   jwt (3.1.2) sha256=af6991f19a6bb4060d618d9add7a66f0eeb005ac0bc017cd01f63b42e122d535
   kagaribi (0.2.2) sha256=525871f9141de08805e5a97bd801f18feca13ccc151d588782c93adb51c9b316
-  llhttp-ffi (0.5.1) sha256=9a25a7fc19311f691a78c9c0ac0fbf4675adbd0cca74310228fdf841018fa7bc
+  llhttp (0.6.1) sha256=9da187ecf6407265465919cc0d691210ef79e38fa6e86e5e45593bdf25b50146
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   minitest (6.0.2) sha256=db6e57956f6ecc6134683b4c87467d6dd792323c7f0eea7b93f66bd284adbc3d
   multi_json (1.18.0) sha256=23f70cf73e2895a33e6d10f0ec955b28ef5627ca4bbad0f292e7d16f4675596f
@@ -294,7 +280,7 @@ CHECKSUMS
   sentry-ruby (6.5.0) sha256=3c57ae0d6a017aafcd9ac37114e38149a58534679dec5d4e9e8fc010b85f3a6b
   signet (0.21.0) sha256=d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b
   simple_oauth (0.4.0) sha256=cf612384951251401404ac823201efeeea78e7921dac7ea1b55fccb7422fcd7e
-  simple_twitter (2.2.3) sha256=062a02891a2ea22e6e5b35f791a40ce158bb30f711be8bc1e4e757bae57dda01
+  simple_twitter (2.3.0) sha256=a6282db7fdaf78b37f189c383fe512c309f302e3487141e87e8927f9ff7522f2
   twitter_oauth2 (0.5.3) sha256=4e992e28983055b5b82a70484fc3b70ae604af63373512cbaf6a650cfa0db4e1
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
