@@ -32,3 +32,5 @@ updates:
     cooldown:
       default-days: 7
   ###########################################################
+      exclude:
+        - simple_twitter
