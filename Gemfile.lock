@@ -175,7 +175,7 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 4.0)
       multi_json (~> 1.10)
-    simple_oauth (0.4.0)
+    simple_oauth (0.4.1)
       base64
       cgi
     simple_twitter (2.3.0)
@@ -279,7 +279,7 @@ CHECKSUMS
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   sentry-ruby (6.5.0) sha256=3c57ae0d6a017aafcd9ac37114e38149a58534679dec5d4e9e8fc010b85f3a6b
   signet (0.21.0) sha256=d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b
-  simple_oauth (0.4.0) sha256=cf612384951251401404ac823201efeeea78e7921dac7ea1b55fccb7422fcd7e
+  simple_oauth (0.4.1) sha256=d4f054685a8bb8661cd4f3010ebfc074d92d538366dcee35eece01d2d8c90660
   simple_twitter (2.3.0) sha256=a6282db7fdaf78b37f189c383fe512c309f302e3487141e87e8927f9ff7522f2
   twitter_oauth2 (0.5.3) sha256=4e992e28983055b5b82a70484fc3b70ae604af63373512cbaf6a650cfa0db4e1
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
