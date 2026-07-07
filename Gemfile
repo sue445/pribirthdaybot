@@ -6,7 +6,7 @@ ruby "~> 4.0.0"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "functions_framework"
+gem "functions_framework", ">= 1.7.0"
 gem "kagaribi"
 gem "sentry-ruby"
 gem "simple_oauth", ">= 0.4.0"
