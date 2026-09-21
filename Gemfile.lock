@@ -21,7 +21,6 @@ GEM
     base64 (0.3.0)
     bigdecimal (3.3.1)
     bindata (2.5.1)
-    cgi (0.5.1)
     cloud_events (0.7.1)
     concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
@@ -174,9 +173,7 @@ GEM
       addressable (~> 2.8)
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 4.0)
-    simple_oauth (0.4.1)
-      base64
-      cgi
+    simple_oauth (1.0.0)
     simple_twitter (2.3.0)
       http (>= 4)
       simple_oauth (>= 0.3.1)
@@ -217,7 +214,6 @@ CHECKSUMS
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   bindata (2.5.1) sha256=53186a1ec2da943d4cb413583d680644eb810aacbf8902497aac8f191fad9e58
   bundler (4.0.15) sha256=a4ceb882fe94a0e0ac63cd0813932bbfd631a14e5ac0b7975189b19a4d28d9e7
-  cgi (0.5.1) sha256=e93fcafc69b8a934fe1e6146121fa35430efa8b4a4047c4893764067036f18e9
   cloud_events (0.7.1) sha256=a7083749ee917131a776e30ea98e2e63f9bcc4a724180c1e6f4324b2f8a4f570
   concurrent-ruby (1.3.8) sha256=b2f1be836e968ccc78ccfce277ea79c72a88633f22306782c16ff23fb415d1e1
   connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
@@ -279,7 +275,7 @@ CHECKSUMS
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   sentry-ruby (7.0.0) sha256=e9616ff521355a983fad404ca575d8bb1f1949a8cac42a7a893dd02156bcdb1a
   signet (0.22.0) sha256=b76d495ccb07ad35dbc89f3e920665a9d8ed717141955034005d7843dcfe4780
-  simple_oauth (0.4.1) sha256=d4f054685a8bb8661cd4f3010ebfc074d92d538366dcee35eece01d2d8c90660
+  simple_oauth (1.0.0) sha256=8722999f93aba59d44565f54917edabca9280d0e3a1bd529f7d4cb8e8cb586e2
   simple_twitter (2.3.0) sha256=a6282db7fdaf78b37f189c383fe512c309f302e3487141e87e8927f9ff7522f2
   twitter_oauth2 (0.5.3) sha256=4e992e28983055b5b82a70484fc3b70ae604af63373512cbaf6a650cfa0db4e1
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
