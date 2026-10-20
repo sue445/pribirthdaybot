@@ -182,7 +182,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (1.1.2)
-    webmock (3.29.0)
+    webmock (3.30.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -280,7 +280,7 @@ CHECKSUMS
   twitter_oauth2 (0.5.3) sha256=4e992e28983055b5b82a70484fc3b70ae604af63373512cbaf6a650cfa0db4e1
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   uri (1.1.2) sha256=89292e98eabbef6248b0a0ed5e7e398e152f83f17560023a6d94a7f492b169fb
-  webmock (3.29.0) sha256=a854b243019d503d3446ab7807c9192f41826d5b673b5dfe0d287ced9606ecbc
+  webmock (3.30.0) sha256=9d3bb917f82bb02effb95bcee36da3783232efacee7783bac4e357c6e650c136
 
 RUBY VERSION
   ruby 4.0.0
